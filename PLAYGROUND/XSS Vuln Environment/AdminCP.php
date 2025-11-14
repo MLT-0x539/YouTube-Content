@@ -46,7 +46,8 @@
 	<p>Use the '#url=' fragment to build an <a> tag in DOM</p>
 	
 	<script src="DOM-XSS.js"></script>
-    
+	<script src="DOM-XSS-TWO.js"></script>
+	
 	<br />
 	<br />
 	<br />
