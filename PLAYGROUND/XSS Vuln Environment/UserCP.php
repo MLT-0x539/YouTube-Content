@@ -60,7 +60,14 @@
 		?>
 		
 	
-   	<br /><br /><br /><br /><br /><hr><h3>Basic Blind XSS example scenario:</h3><hr><br />
+   	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<hr><h3>Basic Blind XSS example scenario:</h3>
+	<hr>
+	<br />
 	<p>Leave a review via the form below. An admin will then be able to read your review from within the admin panel.</p>
     <form action="xss_reflective.php" method="post">
      Please submit your review here: <input type="text" name="review">
