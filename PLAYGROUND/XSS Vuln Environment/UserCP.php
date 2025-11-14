@@ -31,7 +31,11 @@
 	}
 	?>
 	
-	<br /><br /><br /><br /><br />
+	<br />
+	<br />
+	<br /> <!-- HTML GO BRRRRRRRRR... Can't be bothered to style the page w/ CSS lel -->
+	<br />
+	<br />
 	<hr>
 	<h3>Basic Stored XSS example scenario:</h3>
 	<hr><br />
