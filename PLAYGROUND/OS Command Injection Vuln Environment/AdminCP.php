@@ -45,9 +45,9 @@
 	
  <?php
  if (!empty($_POST['dl']; && isset($_POST['dl'])) {
- $_SESSION['dl'] = $_POST['dl'];
- $user_download = $_SESSION['dl'];
- echo $user_download;
+   $_SESSION['dl'] = $_POST['dl'];
+   $user_download = $_SESSION['dl'];
+   echo $user_download;
  }
  ?>
  
@@ -97,12 +97,12 @@
  <?php $url_to_ping = $_POST['url-to-ping']; ?>
  
  <?php if (!empty($_POST['url-to-ping'];) && isset($url_to_ping)): ?>
-<br />
-<p><b>Ping Results:</b></p><br />
+   <br />
+   <p><b>Ping Results:</b></p><br />
  <?php endif; ?>
 
  <?php
-  $ping_resultz = system("ping ".$url_to_ping);
+  $ping_resultz = system(echo "Outputting results now: ; " "ping ".$url_to_ping);
   echo $ping_resultz;
  ?>
  
