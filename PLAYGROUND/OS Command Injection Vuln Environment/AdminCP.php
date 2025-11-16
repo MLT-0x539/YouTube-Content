@@ -95,18 +95,14 @@
      </form>
 
  <?php
-  $url_to_ping = $_POST['url-to-ping'];
-  if (!empty($_POST['url-to-ping'];) && isset($url_to_ping)) {
+    $url_to_ping = $_POST['url-to-ping'];
     $ping_result = system("ping ".$url_to_ping);
- }
- ?>
-
-<br />
-<p><b>Ping Results:</b></p><br />
-
- <?php 
-  echo $ping_resultz;
- ?>
+ ?>	   
+ <?php if (!empty($_POST['url-to-ping'];) && isset($url_to_ping)): ?>
+  <br />
+  <p><b>Ping Results:</b></p><br />
+ <?php endif; ?>
+ <?php echo $ping_resultz; ?>
  
  </body>
 </html>
