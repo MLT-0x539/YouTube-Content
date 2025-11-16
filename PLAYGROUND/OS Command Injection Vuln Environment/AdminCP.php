@@ -44,9 +44,11 @@
 	<br />
 	
  <?php
+ if (!empty($_POST['dl']; && isset($_POST['dl'])) {
  $_SESSION['dl'] = $_POST['dl'];
  $user_download = $_SESSION['dl'];
  echo $user_download;
+ }
  ?>
  
   <center>  
@@ -57,10 +59,8 @@
  </hr>
   <td>
   
-  <!-- 
-    YUP, I KNOW USING <FONT> TAGS LIKE THIS FOR FORMATTING (AS OPPOSED TO CSS) IS ABSOLUTELY DISGUSTING...
-    I SIMPLY DON'T CARE. THIS IS FOR DEMONSTATION PURPOSES ONLY. 
-  -->
+  <!-- YUP, I KNOW USING <FONT> TAGS LIKE THIS FOR FORMATTING (AS OPPOSED TO CSS) IS ABSOLUTELY DISGUSTING...
+       I SIMPLY DON'T CARE. THIS IS FOR DEMONSTATION PURPOSES ONLY -->
 	   
    <font color="red" size="14"><b>|</b></font>
    <font color="green"><b><font color="red"> ></font>Chrome_Installer.exe<font color="red"><</font></b></font> 
@@ -89,20 +89,22 @@
 	<p><b>Check if a third-party website is online or not (via PING request):</b></p>
 	<br />
 	<hr>
-	 <form action="adm.php" method="POST">
+	 <form action="AdminCP.php" method="POST">
        <input type="text" name=url-to-ping">
        <input type="submit">
      </form>
 
- <?php
-    $url_to_ping = $_POST['url-to-ping'];
-    $ping_result = system("ping ".$url_to_ping);
- ?>	   
+ <?php $url_to_ping = $_POST['url-to-ping']; ?>
+ 
  <?php if (!empty($_POST['url-to-ping'];) && isset($url_to_ping)): ?>
-  <br />
-  <p><b>Ping Results:</b></p><br />
+<br />
+<p><b>Ping Results:</b></p><br />
  <?php endif; ?>
- <?php echo $ping_resultz; ?>
+
+ <?php
+  $ping_resultz = system("ping ".$url_to_ping);
+  echo $ping_resultz;
+ ?>
  
  </body>
 </html>
