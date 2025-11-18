@@ -31,12 +31,6 @@
   <br />
   <br />
 
-<?php
-$new_desc = $_POST['profile-desc'];
-$_SESSION['new_desc'] = $new_desc;
-$output_desc = $new_desc;
-?>
-
 <!-- BONUS: Blind XSS can be demonstrated via this input -->
   <form action="user_profile.php">
     <p><label for="profile-desc">Change user profile description here:</label></p>
@@ -45,6 +39,12 @@ $output_desc = $new_desc;
     <input type="submit" value="Submit">
   </form>
   <br />
+
+<?php
+ $new_desc = $_POST['profile-desc'];
+ $_SESSION['new_desc'] = $new_desc;
+ $output_desc = $new_desc;
+?>
 
  </body>
 </html>
