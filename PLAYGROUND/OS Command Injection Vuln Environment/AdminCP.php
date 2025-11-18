@@ -153,7 +153,7 @@
 	<br />
 	<a href="ban_user.php"> BAN USER ACCOUNT </a>
 	<br />
-		<a href="ban_IP.php"> BAN CONNECTIONS FROM SPECIFIC IP ADDRESS </a>
+    <a href="ban_IP.php"> BAN CONNECTIONS FROM SPECIFIC IP ADDRESS </a>
 	<br />
 	<br />
 	<hr>
