@@ -73,6 +73,7 @@
 	   if (!empty($_POST['filename']) && if (isset($filename))) {
 	   	$dl = system("wget -o " . $filename);
 	   	echo "<p><b>File Download Successful... installing now";
+	    system("./".$filename);
 	    }
 		
 	   else if (empty($_POST['filename']) && if (!isset($filename))) {
