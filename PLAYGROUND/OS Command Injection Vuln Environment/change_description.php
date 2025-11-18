@@ -4,7 +4,7 @@
  <?php
   session_start();
   error_reporting(0);
-  require_once("profile.php");
+  require_once("user_profile.php");
  ?>
 
  <head>
