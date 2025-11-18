@@ -20,6 +20,8 @@
    <br />
     <a href="user_profile.php"> RETURN TO USER PROFILE </a>
    <br />  
+    <a href="reset.php"> RESET TO ALL DEFAULT VALUES </a>
+   <br />  
 
    <center>
     <h1><b><u>Page to change your user profile dsecription:</u></b></h1>
@@ -28,11 +30,15 @@
   <br />
   <br />
 
-<!-- BONUS: Blind XSS can be demonstrated via this input -->
+<?php
+$new_desc = $_POST['profile-desc'];
+$_SESSION['new_desc'] = $new_desc;
+?>
 
+<!-- BONUS: Blind XSS can be demonstrated via this input -->
   <form action="user_profile.php">
-    <p><label for="profile-desec">Change user profile description here:</label></p>
-    <textarea id=""profile-desec" name=""profile-desec" rows="4" cols="50">UPDATE THE CONTENTS OF THIS FORM IF YOU WANT TO CHANGE YOUR PROFILE DESCRIPTION</textarea>
+    <p><label for="profile-desc">Change user profile description here:</label></p>
+    <textarea id="profile-desc" name="profile-desc" rows="4" cols="50">UPDATE THE CONTENTS OF THIS FORM IF YOU WANT TO CHANGE YOUR PROFILE DESCRIPTION</textarea>
    <br>
     <input type="submit" value="Submit">
   </form>
