@@ -29,7 +29,7 @@ require_once(
   </center>
   <hr>
   <textarea id="profile-desc" name="profile-desc" rows="10" cols="50">
-   <?pnp echo new_desc; ?>
+   <?pnp echo $output_desc; ?>
   </textarea>
   </body>
   
