@@ -2,6 +2,10 @@
 
 int main(void) {
 
+// examples of data types for each var
+// with format specifiers for each data type
+// also included: alternative format specifiers that can be used for the same data type
+  
 int numType = 1;
 int numType2 = 2;
 int memAddr = 3;
