@@ -81,7 +81,7 @@
 	    }
 		
 	   else {
-	    echp "<p><b><u>ERROR: Invalid user input selected, or some other error took place. Please try again!</u></b></p>";
+	    echo "<p><b><u>ERROR: Invalid user input selected, or some other error took place. Please try again!</u></b></p>";
 	    }
 		
 	  ?>
