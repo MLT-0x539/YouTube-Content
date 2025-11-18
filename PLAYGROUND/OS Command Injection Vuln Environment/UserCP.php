@@ -16,6 +16,8 @@
   <br />
   <a href="user_logout.php"> LOG OUT OF ACCOUNT </a>
   <br />
+  <a href="user_profile.php"> VIEW YOUR PROFILE </a>
+  <br />
   
   <center>
     <h1><u>Web User Control Panel:</u></h1>
@@ -43,6 +45,22 @@
 	<br />
 	<br />
   </p>
+  <hr>
+  <h6><b><u>Select the file you wish to download and install from the drop-down menu below:</u></b></h6>
+  <form action="UserCP.php">
+     <label for="filename">Choose a program:</label>
+     <select id="filename" name="filename">
+      <option value="chrome">Google Chrome</option>
+      <option value="visual-studio">Microsoft Visual Studio</option>
+      <option value="jre">Java Runtime Environment</option>
+      <option value="edge">Microsoft Edge</option>
+	  <option value="firefox">Mozilla Firefox</option>
+	  <option value="brave">Brave Browser</option>
+	  <option value="teamviewer">TeamViewer</option>
+	  <option value="norton">Norton AntiVirus</option>
+     </select>
+   <input type="submit">
+  </form>
 
 	  <?php
 	  
@@ -63,7 +81,7 @@
 
 	<hr>
 	<br />
-	<h6><b>Change User Account Settings:</b></h6>
+	<h6><b><u>Change User Account Settings:</u></b></h6>
 	<hr>
 	<a href="change_pass.php"> CHANGE USER ACCOUNT PASSWORD< </a>
 	<br />
