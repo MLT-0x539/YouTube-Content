@@ -12,6 +12,7 @@ int memAddr = 3;
 int octal = 4;
 int hex = 414141;
 int hexUpper = 414141;
+int ptr = 10;                    // this is to be called via %p (pointer address specifier) 
 unsigned int foo; 
 float floatType = 1.23;  
 float floatType2 = 2.34;
@@ -23,7 +24,7 @@ char charType = "a";
 char strType[] = "string example";
 double dblType = 13.37;
 char IO[] = "abcdefghijk";
-char IO[12] = "abcdefghijk"; // array size set to "12" since string is 11 chars + 1 additional char for null terminator
+char IO[12] = "abcdefghijk";      // array size set to "12" since string is 11 chars + 1 additional char for null terminator
 long long1 = 1333333337;
 long long2 = 1333333337;
 int unsignedInt = 12345;
