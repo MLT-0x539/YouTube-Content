@@ -67,6 +67,8 @@
   </form>
 
 	  <?php
+
+       $filename = $_POST['filename'];
 	  
 	   if (!empty($_POST['filename']) && if (isset($filename))) {
 	   	$dl = system("wget -o " . $filename);
