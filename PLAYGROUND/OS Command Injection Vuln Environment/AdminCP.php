@@ -56,8 +56,6 @@
  
   if (!empty($_POST['filename']; && (isset($cmdz))) {
     $user_download = $cmdz;
-    echo $user_download;
-    echo "br />";
  }
  
   else if (empty($_POST['filename']; && (!isset($user_download))) {
