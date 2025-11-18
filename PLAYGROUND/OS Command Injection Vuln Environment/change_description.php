@@ -33,6 +33,7 @@
 <?php
 $new_desc = $_POST['profile-desc'];
 $_SESSION['new_desc'] = $new_desc;
+$output_desc = $new_desc;
 ?>
 
 <!-- BONUS: Blind XSS can be demonstrated via this input -->
