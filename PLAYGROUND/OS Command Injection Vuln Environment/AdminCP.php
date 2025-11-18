@@ -12,8 +12,17 @@
  </head>
  
  <body>
-  <a href="UserCP.php"> NAVIGATE TO USERCP </a>
+  <body>
+    <a href="admin_login.php"> LOGIN TO ADMINCP </a>
+   <br />
     <a href="user_logout.php"> LOG OUT OF ACCOUNT </a>
+   <br />
+    <a href="UserCP.php"> RETURN TO USER CONTROL PANEL </a>
+   <br />
+    <a href="user_profile.php"> RETURN TO USER PROFILE </a>
+   <br />  
+    <a href="reset.php"> RESET TO ALL DEFAULT VALUES </a>
+   <br />  
   <center>
     <h1><u>Web Admin Panel:</u></h1>
   </center>
