@@ -13,6 +13,7 @@
  
  <body>
   <a href="UserCP.php"> NAVIGATE TO USERCP </a>
+    <a href="user_logout.php"> LOG OUT OF ACCOUNT </a>
   <center>
     <h1><u>Web Admin Panel:</u></h1>
   </center>
@@ -44,12 +45,33 @@
 	<br />
 	
  <?php
- if (!empty($_POST['dl']; && isset($_POST['dl'])) {
-   $_SESSION['dl'] = $_POST['dl'];
-   $user_download = $_SESSION['dl'];
-   echo $user_download;
+ 
+ // YUP, I KNOW THIS CODE IS A MESS LOL
+ // I wrote it in such a manner to help beginners think about how var assignment works in confusing situations...
+ 
+  $_SESSION['dl'] = $_POST['filename'];
+  $cmdz = $_SESSION['dl'];
+  $download_resultz = echo "<p>Result of download script being ran: </p>" . $cmdz; .  "<br />";
+  echo $download_results;
+ 
+  if (!empty($_POST['filename']; && (isset($cmdz))) {
+    $user_download = $cmdz;
+    echo $user_download;
+    echo "br />";
  }
- ?>
+ 
+  else if (empty($_POST['filename']; && (!isset($user_download))) {
+    echo "<p><b><u>ERROR: </u>No user input provided for download script!</b></p>";
+    echo "br />";
+ }
+
+  else {
+    echo "<p><b<u>ERROR: </u>UNKNOWN ERROR HAS BEEN CAUSED!</b></p>"
+	 
+ 
+ }
+  ?>
+ 
  
   <center>  
 <table>
@@ -78,9 +100,15 @@
    <font color="green"><b><font color="red"> ></font>discord.exe<font color="red"><</font></b>
    </font> <b><font color="red" size="14">|</font></b> 
   </td> 
+  <td>
+   <font color="green"><b><font color="red"> ></font> <?php echo $user_download; echo "br />"; echo $download_resultz; ?> <font color="red"><</font></b>
+   </font> <b><font color="red" size="14">|</font></b> 
+  </td> 
 </tr>
  </tbody>
 </table>
+
+
  </center>
 <br />
 <br />
@@ -89,22 +117,40 @@
 	<p><b>Check if a third-party website is online or not (via PING request):</b></p>
 	<br />
 	<hr>
+	
 	 <form action="AdminCP.php" method="POST">
        <input type="text" name=url-to-ping">
        <input type="submit">
      </form>
 
  <?php $url_to_ping = $_POST['url-to-ping']; ?>
- 
  <?php if (!empty($_POST['url-to-ping'];) && isset($url_to_ping)): ?>
-   <br />
-   <p><b>Ping Results:</b></p><br />
+<br />
+<p><b>Ping Results:</b></p><br />
  <?php endif; ?>
 
  <?php
-  $ping_resultz = system(echo "Outputting results now: ; " "ping ".$url_to_ping);
+  $ping_resultz = system("ping ".$url_to_ping);
   echo $ping_resultz;
  ?>
+ 
+ 	<hr>
+	<br />
+	<h6><b>Change Administrator Account Settings:</b></h6>
+	<hr>
+	<a href="change_admin_pass.php"> CHANGE ADMIN ACCOUNT PASSWORD< </a>
+	<br />
+	<a href="change_admin_pic.php"> CHANGE ADMIN PROFILE PICTURE </a>
+	<br />
+	<a href="change_admin_description.php"> CHANGE ADMIN PROFILE DESCRIPTION </a>
+	<br />
+	<a href="ban_user.php"> BAN USER ACCOUNT </a>
+	<br />
+		<a href="ban_IP.php"> BAN CONNECTIONS FROM SPECIFIC IP ADDRESS </a>
+	<br />
+	<br />
+	<hr>
+	<br />
  
  </body>
 </html>
