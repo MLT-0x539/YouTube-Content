@@ -28,7 +28,7 @@ require_once(
     <h1><b><u> User Profile: </u></b></h1>
   </center>
   <hr>
-  <textarea id="story" name="story" rows="10" cols="50">
+  <textarea id="profile-desc" name="profile-desc" rows="10" cols="50">
    <?pnp echo new_desc; ?>
   </textarea>
   </body>
