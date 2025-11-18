@@ -13,8 +13,6 @@
  
  <body>
   <body>
-    <a href="admin_login.php"> LOGIN TO ADMINCP </a>
-   <br />
     <a href="user_logout.php"> LOG OUT OF ACCOUNT </a>
    <br />
     <a href="UserCP.php"> RETURN TO USER CONTROL PANEL </a>
